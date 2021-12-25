@@ -1,0 +1,84 @@
+h2 {
+  margin-bottom: 0.05rem;
+}
+
+img {
+  width: 50vw;
+  height: auto;
+}
+
+button {
+  margin: 0 0;
+  padding: 5% 5%;
+  border-radius: 5%;
+}
+
+.container {
+  width: min-content;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 0.5rem solid #2a2736;
+}
+
+.buttons {
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.row {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.row:last-child {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+.rules {
+    border-top: .1rem solid #2a2736;
+    width: 90%;
+}
+
+.rules h2 {
+    text-align: center;
+}
+
+.winner {
+    color:#6cdfa9;
+}
+
+.loser {
+    color:#df6c6c;
+}
+
+.control {
+    background-color: rgb(235, 235, 235);
+    border-color: #c6c6c7;
+}
+
+#game {
+    color: rgb(214, 88, 88);
+}
+
+#set {
+    color:rgb(49, 212, 172);
+}
+
+#reset {
+    color:rgb(240, 149, 29);
+}
+
+.add {
+    background-color: rgb(152, 238, 66);
+}
+
+.sub {
+    background-color: rgb(220, 20, 60);
+}

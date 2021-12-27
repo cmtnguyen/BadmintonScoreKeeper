@@ -52,13 +52,13 @@ const checkScores = () => {
             // in case user subtracts score
             p1Add.disabled = false;
             p2Add.disabled = false;
-            if(p1 == 0){
+            if (p1 == 0) {
                 p1Sub.disabled = true;
             }
             else {
                 p1Sub.disabled = false;
             }
-            if(p2 == 0){
+            if (p2 == 0) {
                 p2Sub.disabled = true;
             }
             else {
@@ -72,7 +72,7 @@ const checkScores = () => {
         else if ((p1 < 20 && p2 == winningScore) || (p2 < 20 && p1 == winningScore)) {
             p1Add.disabled = true;
             p2Add.disabled = true;
-            if (p2 == winningScore){
+            if (p2 == winningScore) {
                 p2Score.classList.add("winner");
                 p1Score.classList.add("loser");
                 p1Sub.disabled = true;
@@ -94,7 +94,7 @@ const checkScores = () => {
         if (p2 >= (p1 + 2) || p1 >= (p2 + 2)) {
             p1Add.disabled = true;
             p2Add.disabled = true;
-            if (p2 >= p1 + 2){ //p2 is winner by 2 pts
+            if (p2 >= p1 + 2) { //p2 is winner by 2 pts
                 p2Score.classList.add("winner");
                 p1Score.classList.add("loser");
                 p1Sub.disabled = true;
@@ -109,7 +109,7 @@ const checkScores = () => {
         else if (p1 == winningScore || p2 == winningScore) {
             p1Add.disabled = true;
             p2Add.disabled = true;
-            if (p2 == winningScore){
+            if (p2 == winningScore) {
                 p2Score.classList.add("winner");
                 p1Score.classList.add("loser");
                 p1Sub.disabled = true;
@@ -127,13 +127,13 @@ const checkScores = () => {
             p2Score.className = "";
             p1Add.disabled = false;
             p2Add.disabled = false;
-            if(p1 == 0){
+            if (p1 == 0) {
                 p1Sub.disabled = true;
             }
             else {
                 p1Sub.disabled = false;
             }
-            if(p2 == 0){
+            if (p2 == 0) {
                 p2Sub.disabled = true;
             }
             else {
@@ -194,10 +194,10 @@ let p2Name = document.querySelector('#p2Name');
 set.addEventListener('click', function () {
     setNum.innerText = parseInt(setNum.innerText) + 1;
     const li = document.createElement("li");
-    if (!p1Name.value){
+    if (!p1Name.value) {
         p1Name.value = "Player 1";
     }
-    if (!p2Name.value){
+    if (!p2Name.value) {
         p2Name.value = "Player 2";
     }
     li.innerText = `${p1Name.value}: ${p1Score.innerText}pts | ${p2Name.value}: ${p2Score.innerText}pts`;
@@ -205,6 +205,8 @@ set.addEventListener('click', function () {
     p1Score.innerText = p2Score.innerText = 0;
     gameOver = false;
     winningScore = 21;
+    p1Score.className = "";
+    p2Score.className = "";
     p1Add.disabled = false;
     p2Add.disabled = false;
     p1Sub.disabled = true;
@@ -219,6 +221,8 @@ newGame.addEventListener('click', function () {
     setList.innerHTML = "";
     gameOver = false;
     winningScore = 21;
+    p1Score.className = "";
+    p2Score.className = "";
     p1Add.disabled = false;
     p2Add.disabled = false;
     p1Sub.disabled = true;

@@ -229,4 +229,6 @@ newGame.addEventListener('click', function () {
     p2Add.disabled = false;
     p1Sub.disabled = true;
     p2Sub.disabled = true;
+    p1Name.value = "";
+    p2Name.value = "";
 })

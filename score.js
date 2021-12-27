@@ -179,6 +179,8 @@ reset.addEventListener('click', function () {
     p1Score.innerText = p2Score.innerText = 0;
     gameOver = false;
     winningScore = 21;
+    p1Score.className = "";
+    p2Score.className = "";
     p1Add.disabled = false;
     p2Add.disabled = false;
     p1Sub.disabled = true;

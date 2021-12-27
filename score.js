@@ -189,10 +189,18 @@ reset.addEventListener('click', function () {
 let set = document.querySelector("#set");
 let setNum = document.querySelector("#setNum");
 let setList = document.querySelector("#setList");
+let p1Name = document.querySelector('#p1Name');
+let p2Name = document.querySelector('#p2Name');
 set.addEventListener('click', function () {
     setNum.innerText = parseInt(setNum.innerText) + 1;
     const li = document.createElement("li");
-    li.innerText = `Player 1: ${p1Score.innerText}pts | Player 2: ${p2Score.innerText}pts`;
+    if (!p1Name.value){
+        p1Name.value = "Player 1";
+    }
+    if (!p2Name.value){
+        p2Name.value = "Player 2";
+    }
+    li.innerText = `${p1Name.value}: ${p1Score.innerText}pts | ${p2Name.value}: ${p2Score.innerText}pts`;
     setList.append(li);
     p1Score.innerText = p2Score.innerText = 0;
     gameOver = false;

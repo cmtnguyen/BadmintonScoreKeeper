@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Badminton Score Keeper</title>
+    <title>Badminton Score Keeping</title>
     <link rel="stylesheet" href="./score.css">
 </head>
 
@@ -13,6 +13,10 @@
     <div class="container">
         <img src="./badminton.jpg">
         <h2>Set <span id="setNum">1</span></h2>
+        <div class="names">
+            <input type="text" id="p1Name" placeholder="Player 1" value="Player 1"><input type="text" id="p2Name"
+                placeholder="Player 2" value="Player 2">
+        </div>
         <h1><span id="p1Score">0</span> to <span id="p2Score">0</span></h1>
         <div class="buttons">
             <div class="row">
@@ -20,15 +24,15 @@
                 <button id="p1Sub" class="sub">-1 Player 1</button>
             </div>
             <div class="row">
-                <button id="p2Add" class= "add">+1 Player 2</button>
-                <button id="p2Sub" class= "sub">-1 Player 2</button>
+                <button id="p2Add" class="add">+1 Player 2</button>
+                <button id="p2Sub" class="sub">-1 Player 2</button>
             </div>
             <div class="row">
-                <button id="set" class= "control">Next Set</button>
-                <button id="reset" class= "control">Reset Set</button>
+                <button id="set" class="control">Next Set</button>
+                <button id="reset" class="control">Reset Set</button>
             </div>
             <div class="row">
-                <button id="game" class= "control">New Game</button>
+                <button id="game" class="control">New Game</button>
             </div>
         </div>
         <ol id="setList">
@@ -37,9 +41,12 @@
         <div class="rules">
             <h2>How to Use</h2>
             <ol>
+                <li>Add player/team name(s) for their correseponding side. Make sure to switch names if they switch sides</li>
                 <li>You can add or subtract points from each player</li>
-                <li>However, once a there is a winning score according to official badminton rules, the point buttons aside from the winning player's subtract point button will be disabled.</li>
-                <li>"Next Set" saves all sets of the current game in a list and starts the next set (you can have infinite sets and can start new sets at any score).</li>
+                <li>However, once a there is a winning score according to official badminton rules, the point buttons
+                    aside from the winning player's subtract point button will be disabled</li>
+                <li>"Next Set" saves all sets of the current game in a list and starts the next set (you can have
+                    infinite sets and can start new sets at any score)</li>
                 <li>"Reset Set" resets the current set's score to 0 to 0</li>
                 <li>"New Game" resets the set number, the set scores, and the set score list</li>
             </ol>

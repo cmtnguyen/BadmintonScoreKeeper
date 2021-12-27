@@ -82,3 +82,21 @@ button {
 .sub {
     background-color: rgb(220, 20, 60);
 }
+
+.names {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 0 0;
+}
+input[type=text] {
+width: 100%;
+margin: 0 5%;
+}
+
+input[type=text]:first-child {
+  align-self: flex-start;
+}
+input[type=text]:last-child {
+  align-self: flex-end;
+}

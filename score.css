@@ -100,3 +100,12 @@ input[type=text]:first-child {
 input[type=text]:last-child {
   align-self: flex-end;
 }
+
+@media screen and (max-width: 500px) {
+  .row:nth-child(2) {
+    margin-bottom: 1rem;
+  }
+  .buttons {
+    flex-wrap: wrap;
+  }
+}
